@@ -31,40 +31,18 @@ body {
   font-family: 'Oxygen', sans-serif;
 }
 
+section {
+  height: auto;
+}
+
 a {
   color: #00cc44;
 }
 
 header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   height: auto;
   padding: 10px 0;
   width: 100%;
-}
-
-header div {
-  background: #00802b;
-  color: white;
-  display: inline-block;
-  text-align: center;
-  width: 50%;
-}
-
-header h1 {
-  font-size: 50px;
-}
-
-header h1:not(:first-of-type) {
-  display: inline-block;
-}
-
-header img {
-  display: inline-block;
-  margin-bottom: -8px;
-  width: 50px;
-  height: auto;
 }
 
 h1 {
@@ -73,5 +51,19 @@ h1 {
 }
 
 #intro {
+  padding: 5%;
   text-align: center;
+}
+
+/*this padding hack was to get the svg to display in ie*/
+.logo-container {
+  width: 45%;
+  background-image: url("../img/color_logo_only_transparent.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  box-sizing: content-box;
+  max-height: 100%;
+  margin: 0 auto;
+  padding-top: 100px; /* reset */
+  padding-bottom: calc(45% * 1.13107606);
 }
