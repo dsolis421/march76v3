@@ -26,9 +26,18 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
+.clear-fix:after {
+  content: " ";
+  clear: both;
+  display: block;
+  visibility: hidden;
+}
+
 body {
-  color: #003311;
+  color: #fff;
   font-family: 'Oxygen', sans-serif;
+  margin: 0 auto;
+  width: 90%;
 }
 
 section {
@@ -50,20 +59,50 @@ h1 {
   font-size: 50px;
 }
 
-#intro {
-  padding: 5%;
-  text-align: center;
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+a,
+p {
+  font-size: 20px;
 }
 
 /*this padding hack was to get the svg to display in ie*/
 .logo-container {
-  width: 45%;
   background-image: url("../img/color_logo_only_transparent.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   box-sizing: content-box;
-  max-height: 100%;
-  margin: 0 auto;
-  padding-top: 100px; /* reset */
-  padding-bottom: calc(45% * 1.13107606);
+}
+
+.dark-section {
+  background: linear-gradient(30deg,rgba(0,0,0,.8),rgba(20,20,20,.6),rgba(0,0,0,.8));
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 3%;
+  width: 80%;
+}
+
+header div:first-of-type {
+  float: left;
+}
+
+header div:last-of-type {
+  float: right;
+}
+
+header div:last-of-type a {
+  display: block;
+}
+
+#new-menu {
+  height: 50px;
+  overflow-y: hidden;
 }
