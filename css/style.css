@@ -37,12 +37,15 @@ body {
   color: #fff;
   font-family: 'Oxygen', sans-serif;
   margin: 0 auto;
+  position: relative;
   width: 90%;
+  z-index: -1000;
 }
 
 section {
   height: auto;
   opacity: 1;
+  z-index: 0;
 }
 
 a {
@@ -76,10 +79,10 @@ p {
 
 /*this padding hack was to get the svg to display in ie*/
 .logo-container {
-  background-image: url("../img/color_logo_only_transparent.svg");
+  background: #00cc44;
+  background-image: url("../img/white_logoonly_trans.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center;
   box-sizing: content-box;
 }
@@ -100,19 +103,30 @@ main {
   padding-top: 250px;
 }
 
-header div:first-of-type {
+header > div:first-of-type {
   float: left;
 }
 
-header div:last-of-type {
+header > div:last-of-type {
   float: right;
 }
 
-header div:last-of-type a {
+header > div:last-of-type a {
   display: block;
 }
 
-#new-menu {
+.moving-header {
+  border-radius: 10px;
+  display: table;
+  background: #00cc44;
+  padding: 0 15px;
+  text-align: center;
+  transition: all 1s;
+  margin: 0 auto;
+}
+
+
+#menu-scrolling {
   height: 100px;
   overflow-y: hidden;
 }
