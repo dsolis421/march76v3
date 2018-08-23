@@ -4,6 +4,15 @@ GREEN: #00802b
 DARK GREEN: #003311
 POWDER BLUE: #66b3ff
 */
+@font-face {
+    font-family: quicksand;
+    src: url(Quicksand-Regular.ttf);
+}
+
+@font-face {
+    font-family: julius;
+    src: url(JuliusSansOne-Regular.ttf);
+}
 
 /*css reset*/
 html, body, div, span, applet, object, iframe,
@@ -30,11 +39,18 @@ time, mark, audio, video {
 body {
   color: #0a290a;
   background: #fff;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'quicksand', sans-serif;
   height: 100vh;
   text-align: center;
   width: 100%;
   z-index: -1000;
+}
+
+h1,
+h2,
+h3,
+.logo-container span {
+  font-family: 'julius', sans-serif;
 }
 
 h1 {
@@ -139,6 +155,10 @@ footer > h3 {
 footer {
   bottom: 0;
   height: 50px;
+}
+
+#fadein-footer {
+  display: none;
 }
 
 footer h3 {
